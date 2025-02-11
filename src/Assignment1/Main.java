@@ -2,7 +2,7 @@ package Assignment1;
 
 public class Main {
     public static void main(String[] args) {
-        dbs.initializeDatabase(); // Создание таблиц в БД
+        dbs.initializeDatabase();
 
         RentalService rentalService = new RentalService();
 

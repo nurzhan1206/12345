@@ -6,7 +6,6 @@ import java.util.List;
 
 public class RentalService {
 
-    // Добавление машины в БД
     public void addVehicle(Vehicle vehicle) {
         String sql = "INSERT INTO vehicles (brand, model, is_available) VALUES (?, ?, ?)";
 
@@ -22,7 +21,6 @@ public class RentalService {
         }
     }
 
-    // Добавление клиента в БД
     public void addCustomer(Customer customer) {
         String sql = "INSERT INTO customers (name, phone_number) VALUES (?, ?)";
 
@@ -37,7 +35,6 @@ public class RentalService {
         }
     }
 
-    // Чтение доступных машин из БД
     public void displayAvailableVehicles() {
         String sql = "SELECT * FROM vehicles WHERE is_available = TRUE";
         List<Vehicle> vehicles = new ArrayList<>();
@@ -62,7 +59,6 @@ public class RentalService {
         vehicles.forEach(System.out::println);
     }
 
-    // Аренда машины
     public void rentVehicle(int vehicleId) {
         String sql = "UPDATE vehicles SET is_available = FALSE WHERE id = ?";
 
@@ -80,7 +76,6 @@ public class RentalService {
         }
     }
 
-    // Возврат машины
     public void returnVehicle(int vehicleId) {
         String sql = "UPDATE vehicles SET is_available = TRUE WHERE id = ?";
 
