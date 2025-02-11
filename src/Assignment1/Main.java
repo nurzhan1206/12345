@@ -6,6 +6,7 @@ public class Main {
 
         RentalService rentalService = new RentalService();
 
+
         rentalService.addVehicle(new Vehicle("1", "Toyota", "Camry"));
         rentalService.addVehicle(new Vehicle("2", "Honda", "Civic"));
         rentalService.addVehicle(new Vehicle("3", "BMW", "X5"));
